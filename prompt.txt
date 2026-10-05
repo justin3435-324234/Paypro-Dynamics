@@ -1,0 +1,1109 @@
+You are an expert full-stack web developer and UI/UX designer. We are going to build a complete Employee Payroll Management System called:
+
+PAY PRO DYNAMICS
+
+The system must be a fully functional web-based payroll management system, not just a static UI or prototype.
+
+IMPORTANT:
+- Build the system step-by-step.
+- Do not create fake functionality or placeholder buttons.
+- Every button, form, table, search field, calculation, login, and CRUD operation must actually work.
+- Keep the code organized, beginner-friendly, readable, and maintainable.
+- Do not use unnecessarily advanced frameworks or complicated architecture.
+- The application will run locally using XAMPP.
+- Use MySQL through XAMPP for the database.
+- The frontend must use HTML, CSS, and JavaScript.
+- Use PHP for the backend/database communication because the system will run on XAMPP.
+- Use MySQL as the database.
+- Make the system responsive for desktop and laptop screens.
+- Do not use React, Vue, Angular, Node.js, or other frontend frameworks unless absolutely necessary.
+- Prefer plain HTML + CSS + JavaScript + PHP + MySQL.
+
+==================================================
+1. SYSTEM NAME
+==================================================
+
+PAY PRO DYNAMICS
+
+Tagline:
+"Smarter Payroll. Simpler Management."
+
+The system is an Employee Payroll Management System designed to help an organization manage employees, salaries, attendance-related payroll information, overtime, deductions, and payroll records.
+
+==================================================
+2. DESIGN DIRECTION
+==================================================
+
+Create a professional, modern, clean, corporate payroll management interface.
+
+Design characteristics:
+
+- Clean professional appearance
+- Modern dashboard
+- Minimal but polished UI
+- Good spacing and alignment
+- Clear typography
+- Professional color palette
+- Consistent buttons and form styles
+- Responsive layout
+- Easy-to-read tables
+- Professional cards and statistics
+- Clean sidebar navigation
+- Top navigation/header
+- Proper hover states
+- Proper active navigation states
+- Toast notifications
+- Confirmation dialogs
+- Loading states where appropriate
+- Empty states when there is no data
+- Error states
+- Form validation messages
+
+The design should look like a real commercial payroll management system rather than a school project.
+
+Use a professional color system such as:
+
+Primary:
+#2563EB
+
+Secondary:
+#1E40AF
+
+Background:
+#F8FAFC
+
+Cards:
+#FFFFFF
+
+Text:
+#0F172A
+
+Secondary Text:
+#64748B
+
+Success:
+#16A34A
+
+Warning:
+#F59E0B
+
+Danger:
+#DC2626
+
+Do not overuse colors.
+
+==================================================
+3. MAIN LAYOUT
+==================================================
+
+The authenticated application should use:
+
+LEFT SIDEBAR
+----------------
+Pay Pro Dynamics logo/name
+
+Dashboard
+Employees
+Departments
+Positions
+Attendance
+Payroll
+Deductions
+Reports
+Users
+Settings
+
+Logout
+
+TOP HEADER
+----------------
+Page title
+Search
+Notification icon
+User profile
+User role
+
+MAIN CONTENT
+----------------
+Page-specific content
+
+The sidebar must remain consistent throughout the system.
+
+On smaller screens, the sidebar should collapse into a mobile navigation menu.
+
+==================================================
+4. WIREFRAME
+==================================================
+
+Create the following wireframes before implementing the pages.
+
+PAGE 1 — LOGIN
+
+------------------------------------------------
+|              PAY PRO DYNAMICS               |
+|                                             |
+|          Employee Payroll System             |
+|                                             |
+| Username / Email                            |
+| [____________________________]              |
+|                                             |
+| Password                                    |
+| [____________________________]              |
+|                                             |
+| [ ] Remember Me                             |
+|                                             |
+|             [ LOGIN ]                       |
+|                                             |
+| Forgot Password?                            |
+------------------------------------------------
+
+Login requirements:
+
+- Username/email
+- Password
+- Show/hide password
+- Remember me
+- Login validation
+- Invalid credentials message
+- Account status validation
+- Session creation
+- Redirect to dashboard after successful login
+
+==================================================
+5. DASHBOARD WIREFRAME
+==================================================
+
+------------------------------------------------------------
+| Sidebar | Top Header                                    |
+------------------------------------------------------------
+|         | Dashboard                                      |
+|         |                                                 |
+|         | [Total Employees] [Active] [Payroll] [Pending]|
+|         |                                                 |
+|         | Payroll Summary                                 |
+|         | [Monthly Payroll Chart]                        |
+|         |                                                 |
+|         | Recent Payroll Transactions                     |
+|         | [Employee | Period | Gross | Deduction | Net] |
+|         |                                                 |
+|         | Recent Employees                                |
+------------------------------------------------------------
+
+Dashboard should display:
+
+- Total employees
+- Active employees
+- Inactive employees
+- Current payroll total
+- Pending payroll
+- Recent payroll records
+- Payroll summary
+- Employee distribution
+- Recent activity
+
+Use JavaScript charts only if useful. Keep them lightweight.
+
+==================================================
+6. EMPLOYEE MANAGEMENT
+==================================================
+
+Create an Employees page.
+
+Features:
+
+- View employees
+- Add employee
+- Edit employee
+- Delete/deactivate employee
+- Search employee
+- Filter employee
+- View employee details
+
+Employee table:
+
+Employee ID
+Full Name
+Department
+Position
+Employment Status
+Rate/Salary
+Date Hired
+Actions
+
+Add Employee form:
+
+Employee ID
+First Name
+Middle Name
+Last Name
+Email
+Phone
+Address
+Date of Birth
+Date Hired
+Department
+Position
+Employment Status
+Salary Type
+Basic Salary
+Hourly Rate
+
+Buttons:
+
+Save Employee
+Cancel
+Clear
+
+Validation must be implemented.
+
+==================================================
+7. EMPLOYEE PROFILE
+==================================================
+
+Create an Employee Details/Profile page.
+
+Display:
+
+- Employee information
+- Employment information
+- Salary information
+- Payroll history
+- Attendance summary
+- Deduction summary
+
+Include buttons:
+
+Edit Employee
+Deactivate Employee
+View Payroll History
+Print Employee Information
+
+==================================================
+8. DEPARTMENT MANAGEMENT
+==================================================
+
+Create Departments page.
+
+CRUD operations:
+
+Create department
+Read departments
+Update department
+Delete department
+
+Fields:
+
+Department ID
+Department Name
+Description
+Status
+
+Prevent deletion if the department is currently being used by employees unless properly handled.
+
+==================================================
+9. POSITION MANAGEMENT
+==================================================
+
+Create Positions page.
+
+Fields:
+
+Position ID
+Position Name
+Department
+Description
+Status
+
+CRUD operations must work.
+
+==================================================
+10. ATTENDANCE
+==================================================
+
+Create an Attendance page.
+
+The system should support:
+
+Employee
+Date
+Time In
+Time Out
+Regular Hours
+Overtime Hours
+Late Hours
+Status
+
+Statuses:
+
+Present
+Absent
+Late
+Leave
+
+Provide:
+
+- Add attendance
+- Edit attendance
+- Delete attendance
+- Search attendance
+- Filter by employee
+- Filter by date
+- Filter by month
+
+Payroll calculations should be able to use attendance information.
+
+==================================================
+11. PAYROLL
+==================================================
+
+This is the main module.
+
+Create a Payroll page.
+
+Payroll table:
+
+Payroll ID
+Employee
+Payroll Period
+Basic Salary
+Regular Pay
+Overtime Pay
+Allowances
+Gross Pay
+Deductions
+Net Pay
+Status
+Actions
+
+Payroll statuses:
+
+Draft
+Processed
+Paid
+
+Create Payroll form.
+
+Inputs:
+
+Employee
+Payroll Period
+Basic Salary
+Days Worked
+Hours Per Day
+Regular Hours
+Overtime Hours
+Overtime Rate
+Allowances
+Deductions
+
+The system should automatically calculate:
+
+Regular Pay
+Overtime Pay
+Gross Pay
+Total Deductions
+Net Pay
+
+Basic calculation concept:
+
+Regular Pay =
+Basic Salary or applicable regular earnings
+
+Overtime Pay =
+Overtime Hours × Overtime Rate
+
+Gross Pay =
+Regular Pay + Overtime Pay + Allowances
+
+Net Pay =
+Gross Pay - Total Deductions
+
+IMPORTANT:
+
+Do not hardcode payroll calculations into the UI.
+
+The frontend may preview calculations using JavaScript, but the backend must validate and calculate the final payroll amount before saving it to MySQL.
+
+Prevent invalid negative values.
+
+==================================================
+12. DEDUCTIONS
+==================================================
+
+Create a Deductions module.
+
+Possible deduction types:
+
+Tax
+SSS
+PhilHealth
+Pag-IBIG
+Loan
+Absence
+Late
+Other Deduction
+
+Fields:
+
+Deduction ID
+Employee
+Deduction Type
+Amount
+Description
+Date
+Status
+
+Allow:
+
+Add
+Edit
+Delete
+Search
+Filter
+
+==================================================
+13. PAYROLL PROCESSING FLOW
+==================================================
+
+Implement this exact general flow:
+
+LOGIN
+↓
+DASHBOARD
+↓
+EMPLOYEE MANAGEMENT
+↓
+ATTENDANCE
+↓
+PAYROLL PREPARATION
+↓
+PAYROLL CALCULATION
+↓
+PAYROLL REVIEW
+↓
+PAYROLL PROCESSING
+↓
+PAYROLL RECORD SAVED
+↓
+PAYSLIP / REPORT
+↓
+PAYROLL HISTORY
+
+Payroll processing should have confirmation before final processing.
+
+Once payroll is marked as processed, prevent accidental modification unless an authorized user reopens it.
+
+==================================================
+14. PAYSLIP
+==================================================
+
+Create a professional payslip page.
+
+Display:
+
+PAY PRO DYNAMICS
+
+Employee Name
+Employee ID
+Department
+Position
+Payroll Period
+
+EARNINGS
+
+Basic Pay
+Regular Pay
+Overtime Pay
+Allowances
+Gross Pay
+
+DEDUCTIONS
+
+Tax
+SSS
+PhilHealth
+Pag-IBIG
+Loans
+Other Deductions
+
+TOTAL DEDUCTIONS
+
+NET PAY
+
+Include:
+
+Print Payslip
+Download/Generate PDF if implemented
+Back
+
+The payslip should have a professional printable layout.
+
+==================================================
+15. REPORTS
+==================================================
+
+Create Reports page.
+
+Reports should include:
+
+- Payroll Summary
+- Employee Payroll History
+- Employee List
+- Attendance Report
+- Deduction Report
+- Monthly Payroll Report
+
+Provide filters:
+
+Date From
+Date To
+Department
+Employee
+Payroll Status
+
+Buttons:
+
+Generate Report
+Print
+Export
+
+If export is implemented, make sure the generated data comes from the database.
+
+==================================================
+16. USER MANAGEMENT
+==================================================
+
+Create Users page.
+
+User roles:
+
+ADMIN
+MANAGER
+EMPLOYEE
+
+ADMIN:
+
+- Full system access
+- Manage employees
+- Manage payroll
+- Manage users
+- Manage settings
+- View reports
+
+MANAGER:
+
+- View employees
+- Manage attendance
+- Process payroll
+- View reports
+
+EMPLOYEE:
+
+- View own profile
+- View own attendance
+- View own payroll
+- View own payslips
+
+Implement role-based access control.
+
+Do not rely only on hiding buttons with JavaScript.
+
+The PHP backend must also verify the user's role before allowing protected actions.
+
+==================================================
+17. SETTINGS
+==================================================
+
+Create Settings page.
+
+Sections:
+
+Company Information
+System Settings
+Payroll Settings
+User Profile
+Security
+
+Company information:
+
+Company Name
+Company Address
+Contact Number
+Email
+Logo
+
+Payroll settings:
+
+Default working hours
+Default overtime rate
+Payroll frequency
+
+==================================================
+18. DATABASE
+==================================================
+
+Create a MySQL database using XAMPP.
+
+Database name:
+
+pay_pro_dynamics
+
+Create a proper relational database.
+
+Suggested tables:
+
+users
+employees
+departments
+positions
+attendance
+payroll
+payroll_items
+deductions
+employee_deductions
+settings
+activity_logs
+
+Use primary keys and foreign keys where appropriate.
+
+Do NOT duplicate unnecessary information.
+
+Use appropriate data types.
+
+Use:
+
+INT
+VARCHAR
+DATE
+TIME
+DECIMAL
+ENUM where appropriate
+TIMESTAMP
+
+Use AUTO_INCREMENT for appropriate IDs.
+
+==================================================
+19. DATABASE RELATIONSHIPS
+==================================================
+
+Suggested relationship:
+
+departments
+    ↓
+employees
+    ↓
+attendance
+
+departments
+    ↓
+positions
+    ↓
+employees
+
+employees
+    ↓
+payroll
+    ↓
+payroll_items
+
+employees
+    ↓
+employee_deductions
+    ↓
+deductions
+
+users
+    ↓
+activity_logs
+
+Make sure foreign keys are logically designed.
+
+==================================================
+20. XAMPP CONFIGURATION
+==================================================
+
+The project must work inside:
+
+C:\xampp\htdocs\
+
+Suggested project folder:
+
+C:\xampp\htdocs\pay-pro-dynamics\
+
+Suggested structure:
+
+pay-pro-dynamics/
+│
+├── index.php
+├── login.php
+├── logout.php
+├── dashboard.php
+│
+├── config/
+│   └── database.php
+│
+├── includes/
+│   ├── header.php
+│   ├── sidebar.php
+│   ├── navbar.php
+│   ├── footer.php
+│   ├── auth.php
+│   └── functions.php
+│
+├── employees/
+│   ├── index.php
+│   ├── add.php
+│   ├── edit.php
+│   ├── view.php
+│   └── delete.php
+│
+├── departments/
+│
+├── positions/
+│
+├── attendance/
+│
+├── payroll/
+│
+├── deductions/
+│
+├── reports/
+│
+├── users/
+│
+├── settings/
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── app.js
+│   └── images/
+│
+└── database/
+    └── pay_pro_dynamics.sql
+
+You may improve the structure if necessary, but keep it understandable.
+
+==================================================
+21. SECURITY
+==================================================
+
+Implement basic real-world security practices.
+
+Use:
+
+- PHP sessions
+- Password hashing using password_hash()
+- password_verify()
+- Prepared statements
+- Input validation
+- Output escaping
+- Role-based authorization
+- Session protection
+- Logout functionality
+- CSRF protection for important forms if practical
+- Server-side validation
+- Do not store plain-text passwords
+- Do not put database credentials inside frontend JavaScript
+- Do not expose sensitive database information
+
+Use PDO or MySQLi with prepared statements.
+
+Prefer PDO if it keeps the implementation clean.
+
+==================================================
+22. JAVASCRIPT
+==================================================
+
+Use JavaScript for:
+
+- Form validation
+- Password visibility
+- Sidebar toggle
+- Modal dialogs
+- Confirmation dialogs
+- Search/filter interactions
+- Payroll calculation preview
+- Notifications/toasts
+- Dynamic form behavior
+- UI interactions
+
+Do not move critical business logic entirely into JavaScript.
+
+The PHP backend must remain authoritative.
+
+==================================================
+23. UI COMPONENTS
+==================================================
+
+Create reusable styles/components for:
+
+Buttons
+Cards
+Tables
+Forms
+Inputs
+Selects
+Modals
+Alerts
+Badges
+Navigation
+Pagination
+Search bars
+Dropdowns
+Toast notifications
+
+Use consistent styling throughout the system.
+
+==================================================
+24. ERROR HANDLING
+==================================================
+
+Every database operation must handle errors properly.
+
+Examples:
+
+- Duplicate employee ID
+- Duplicate username
+- Missing required field
+- Invalid salary
+- Invalid payroll period
+- Employee not found
+- Payroll not found
+- Database connection failure
+- Unauthorized access
+
+Do not display raw SQL errors to normal users.
+
+Provide friendly error messages.
+
+==================================================
+25. USER EXPERIENCE
+==================================================
+
+The system should feel like a real payroll application.
+
+Examples:
+
+When an employee is successfully created:
+
+"Employee successfully added."
+
+When payroll is processed:
+
+"Payroll successfully processed."
+
+When deletion occurs:
+
+"Are you sure you want to deactivate this employee?"
+
+Use appropriate success, warning, and error notifications.
+
+==================================================
+26. RESPONSIVE DESIGN
+==================================================
+
+The website must work properly on:
+
+Desktop
+Laptop
+Tablet
+
+Prioritize desktop because this is a business payroll system.
+
+Do not allow tables and forms to break the layout.
+
+Use responsive CSS.
+
+==================================================
+27. DEVELOPMENT PROCESS
+==================================================
+
+Do NOT immediately generate hundreds of files without checking the architecture.
+
+Follow this development order:
+
+PHASE 1
+Analyze requirements.
+
+PHASE 2
+Create complete system architecture.
+
+PHASE 3
+Create database ERD/database structure.
+
+PHASE 4
+Create SQL database script.
+
+PHASE 5
+Create project folder structure.
+
+PHASE 6
+Create database connection.
+
+PHASE 7
+Create authentication/login system.
+
+PHASE 8
+Create shared layout:
+- Sidebar
+- Header
+- Footer
+
+PHASE 9
+Create dashboard.
+
+PHASE 10
+Create employee management.
+
+PHASE 11
+Create department management.
+
+PHASE 12
+Create position management.
+
+PHASE 13
+Create attendance.
+
+PHASE 14
+Create deductions.
+
+PHASE 15
+Create payroll processing.
+
+PHASE 16
+Create payslip.
+
+PHASE 17
+Create reports.
+
+PHASE 18
+Create user management.
+
+PHASE 19
+Create settings.
+
+PHASE 20
+Security testing.
+
+PHASE 21
+Database testing.
+
+PHASE 22
+Payroll calculation testing.
+
+PHASE 23
+UI/UX testing.
+
+PHASE 24
+Final integration testing.
+
+==================================================
+28. IMPORTANT DEVELOPMENT RULE
+==================================================
+
+Before writing code, provide:
+
+1. Complete system architecture
+2. Complete page list
+3. Complete user flow
+4. Complete database tables
+5. Database relationships
+6. Folder structure
+7. Payroll calculation logic
+8. Role permissions
+9. Wireframe description for every major page
+
+Then begin implementation.
+
+Do not skip the planning stage.
+
+==================================================
+29. TESTING REQUIREMENTS
+==================================================
+
+After implementation, test:
+
+LOGIN
+- Correct credentials
+- Wrong credentials
+- Disabled account
+
+EMPLOYEES
+- Add
+- Edit
+- View
+- Deactivate
+- Search
+- Validation
+
+ATTENDANCE
+- Add
+- Edit
+- Delete
+- Filtering
+
+PAYROLL
+- Calculate
+- Save
+- Process
+- Prevent invalid values
+- Verify gross pay
+- Verify deductions
+- Verify net pay
+
+USERS
+- Role permissions
+- Unauthorized access
+
+DATABASE
+- Foreign keys
+- Duplicate records
+- Invalid records
+
+==================================================
+30. FINAL REQUIREMENT
+==================================================
+
+The final result must be a COMPLETE FUNCTIONING PAYROLL MANAGEMENT SYSTEM.
+
+It must not be:
+
+- A static HTML template
+- A frontend-only project
+- A fake dashboard
+- A UI prototype
+- A system with non-working buttons
+- A system with hardcoded employee data
+- A system with fake payroll calculations
+
+It must actually connect to:
+
+XAMPP
+↓
+PHP
+↓
+MySQL
+↓
+Pay Pro Dynamics
+
+All important data must be stored and retrieved from MySQL.
+
+Make the design professional, clean, modern, and realistic.
+
+Before each major implementation phase, briefly explain what will be created and why.
+
+If you encounter an error, diagnose the actual cause and fix it rather than creating a workaround that breaks another part of the system.
+
+Do not remove existing working functionality when adding new features.
+
+At the end, provide:
+
+1. Complete setup instructions for XAMPP
+2. Database import instructions
+3. Default admin account setup
+4. Project URL
+5. Testing checklist
+6. Complete list of implemented modules
+7. Explanation of the final system flow
